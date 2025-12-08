@@ -1,0 +1,109 @@
+.rBg-1 {
+  background-image: linear-gradient(to bottom right, #ff6ec4, #7873f5);
+}
+
+.hint-1 {
+  color: #16a34a;
+}
+
+.hintBg-1 {
+  background-color: #d5ffd8;
+}
+
+.rBg-2 {
+  background-image: linear-gradient(to bottom right, #7873f5, #56ccf2);
+}
+
+.hint-2 {
+  color: #2563eb;
+}
+
+.hintBg-2 {
+  background-color: #eff6ff;
+}
+
+.rBg-3 {
+  background-image: linear-gradient(to bottom right, #56ccf2, #ff6ec4);
+}
+
+.hint-3 {
+  color: #9333ea;
+}
+
+.hintBg-3 {
+  background-color: #f4e9ff;
+}
+
+.rBg-4 {
+  background-image: linear-gradient(to bottom right, #ff6ec4, #56ccf2);
+}
+
+.hint-4 {
+  color: #ea580c;
+}
+
+.hintBg-4 {
+  background-color: #fff0dd;
+}
+
+.txtsm {
+  font-size: 0.75rem;
+  padding: 2px 9px;
+}
+
+.pink {
+  color: #ff6ec4 !important;
+}
+
+.bg-pink {
+  background-color: #ff6ec41a;
+}
+
+.form-check-input:focus {
+  border-color: none !important;
+  box-shadow: none;
+}
+.form-check-input:not(:checked) {
+  background-color: #d1d5db !important;
+  border-color: #e5e7eb !important;
+}
+
+.checkBg-1:checked {
+  background-color: #ff6ec4 !important;
+  border-color: #ff6ec4 !important;
+}
+.checkBg-2:checked {
+  background-color: #7873f5 !important;
+  border-color: #7873f5 !important;
+}
+.checkBg-3:checked {
+  background-color: #56ccf2 !important;
+  border-color: #56ccf2 !important;
+}
+
+.custom {
+  width: 2.75rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+
+@media (min-width: 576px) {
+  .col-sm-6 {
+    max-width: calc(50% - 0.5rem);
+  }
+}
+@media (min-width: 768px) {
+  .col-md-6 {
+    max-width: calc(50% - 0.5rem);
+  }
+
+  button[name='action'].col-md-6{
+    max-width: calc(50% - 0.75rem);
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl-4 {
+    max-width: calc((100% / 3) - 0.667rem);
+  }
+}

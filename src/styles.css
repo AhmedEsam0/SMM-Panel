@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  scroll-behavior: smooth;
+}
+
+.round-1 {
+  border-radius: 1rem;
+}
+.mb-2x5 {
+  margin-bottom: 2.5rem;
+}
+
+.fs-14px {
+  font-size: 14px;
+}
+
+.ls-1 {
+  letter-spacing: 0.7px;
+}
+
+.ls-2 {
+  letter-spacing: 1.4px;
+}
+
+.ls-3 {
+  letter-spacing: 2.1px;
+}
+
+.fs-1x1 {
+  font-size: 1.1rem;
+}
+.fs-1x4{
+  font-size: 1.4rem !important;
+}
+
+.icon {
+  height: 48px;
+  width: 48px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.75rem;
+}
+
+.bigger {
+  width: 56px;
+  height: 56px;
+}
+
+.grad {
+  background: linear-gradient(135deg, #ff6ec4 0%, #7873f5 50%, #56ccf2 100%);
+  color: white;
+}
+
+.sBg-1 {
+  background: linear-gradient(to bottom right, #ec4899, #f43f5e);
+}
+.sBg-2 {
+  background: linear-gradient(to bottom right, #ef4444, #e11d48);
+}
+
+.sBg-3 {
+  background: linear-gradient(to bottom right, #3b82f6, #06b6d4);
+}
+.sBg-4 {
+  background: linear-gradient(to bottom right, #000, #1f2937);
+}
+.sBg-5 {
+  background: linear-gradient(to bottom right, #2563eb, #60a5fa);
+}
+.sBg-6 {
+  background: linear-gradient(to bottom right, #9333ea, #ec4899);
+}

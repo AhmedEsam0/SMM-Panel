@@ -1,0 +1,151 @@
+<div class="wrapper">
+  <div class="mb-2x5">
+    <h2 class="fw-bold ls-1">Welcome Back, Ahmed!</h2>
+    <p class="ls-1 text-secondary fw-semibold fs-1x1">
+      Here's what's happening with your account today
+    </p>
+  </div>
+  <!-- Statistics Start -->
+  <div class="row gap-3 px-3 mb-2x5">
+    @for(stat of stats; track stat.title){
+    <div class="stat-card p-4 bg-white border rounded-4 col-12 col-sm-6 col-xl">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <span [ngClass]="['icon', 'p-2', 'fs-5', stat.iconBgColor]"
+          ><i [ngClass]="stat.icon"></i
+        ></span>
+        <span
+          class="txtsm"
+          [ngClass]="['fw-bold', 'rounded-pill', stat.hintBgColor, stat.hintTextColor]"
+          >{{ stat.hintText }}</span
+        >
+      </div>
+
+      <p class="mb-1 fs-1x1 text-secondary fw-semibold text-capitalize">{{ stat.title }}</p>
+
+      <p class="fw-bold fs-3 mb-0">{{ stat.data }}</p>
+    </div>
+    }
+  </div>
+
+  <section>
+    <h3 class="ls-1 mb-4">Quick Actions</h3>
+    <div class="row gap-4 px-3 mb-2x5">
+      @for (btn of btns; track btn.title) {
+      <button name="action"
+        type="button"
+        class="btn text-start p-4 round-1 col-12 col-md-6"
+        [ngClass]="btn === btns[0] ? 'grad border-0 outline-0' : 'bg-white border'"
+      >
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <h4 class="fs-1x1 fw-bold mb-2">{{ btn.title }}</h4>
+            <p class="txtsm p-0 m-0" [ngClass]="{ 'text-secondary': btn === btns[1] }">
+              {{ btn.hint }}
+            </p>
+          </div>
+          <i
+            [ngClass]="
+              btn === btns[0] ? 'fa-solid fa-arrow-right fs-5' : 'fa-solid fa-circle-plus fs-4 pink'
+            "
+          ></i>
+        </div>
+      </button>
+      }
+    </div>
+  </section>
+
+  <section>
+    <h3 class="mb-4">Popular Services</h3>
+    <div class="row gap-3 px-3 mb-2x5">
+      @for (service of services; track service.title) {
+      <div class="p-4 bg-white border rounded-4 col-12 col-sm-6 col-xl-4">
+        <div [ngClass]="['icon', 'bigger', service.iconBgClass, 'fs-4', 'mb-3', 'm-auto']">
+          <i [ngClass]="service.icon"></i>
+        </div>
+        <h4 class="fw-bold mb-2 fs-1x4 text-center">
+          {{ service.title }}
+        </h4>
+        <p class="text-secondary fw-semibold mb-4">{{ service.hint }}</p>
+        <div class="d-flex justify-content-between align-items-center pink">
+          <span class="fw-bold">${{ service.price }}/1000</span>
+          <button type="button" class="btn pink fw-bold bg-pink">Order</button>
+        </div>
+      </div>
+      }
+    </div>
+  </section>
+
+  <section>
+    <h3 class="mb-3">Magic Tools</h3>
+    <div class="row gap-3 px-3 mb-2x5">
+      @for (tool of tools; track tool.title) {
+      <div class="p-4 bg-white border rounded-4 col-12 col-md-6 col-xl-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <span [ngClass]="[tool.iconBg, 'icon']">
+            <i [ngClass]="tool.icon"></i>
+          </span>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input custom"
+              [ngClass]="tool.checkBg"
+              type="checkbox"
+              role="switch"
+              id="switchCheckChecked"
+              (click)="tool.isActive = !tool.isActive"
+              [checked]="tool.isActive"
+            />
+          </div>
+        </div>
+        <h4 class="fw-bold mb-2">{{ tool.title }}</h4>
+        <p>{{ tool.hint }}</p>
+      </div>
+      }
+    </div>
+  </section>
+
+  <section class="p-4 bg-white border rounded-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h3 class="">Recent Orders</h3>
+      <button class="btn pink bg-pink fw-bold" type="button" role="button">View All</button>
+    </div>
+
+    <table class="table table-striped table-hover text-secondary">
+      <thead>
+        <tr>
+          <th scope="col">Order ID</th>
+          <th scope="col">Service</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>John</td>
+          <td>Doe</td>
+          <td>@social</td>
+          <td>Doe</td>
+          <td>@social</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</div>

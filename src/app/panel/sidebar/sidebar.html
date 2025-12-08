@@ -1,0 +1,77 @@
+@if (isSidebarOpen) {
+<div class="overlay" (click)="closeSidebar()"></div>
+
+}
+
+<!-- Sidebar -->
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <a routerLink="home" class="text-center" (click)="closeSidebar()">
+    <img src="Logo.JPG" class="logo" />
+  </a>
+  <ul class="menu">
+    <li (click)="closeSidebar()">
+      <a routerLink="dashboard" routerLinkActive="active"
+        ><i class="fa-solid fa-table-cells-large"></i><span>Dashboard</span></a
+      >
+    </li>
+    <li (click)="closeSidebar()">
+      <a routerLink="services" routerLinkActive="active"
+        ><i class="fa-solid fa-cubes"></i><span>Services</span></a
+      >
+    </li>
+    <li (click)="closeSidebar()">
+      <a routerLink="new-order" routerLinkActive="active"
+        ><i class="fa-solid fa-circle-plus"></i><span>New Order</span></a
+      >
+    </li>
+    <li (click)="closeSidebar()">
+      <a routerLink="magic" routerLinkActive="active"
+        ><i class="fas fa-magic"></i><span>Magic</span></a
+      >
+    </li>
+    <li class="dropdown" [class.active]="isModerationActive()">
+      <a
+        class="dropdown-trigger cursor-pointer"
+        [class.active]="isModerationActive()"
+        (click)="toggleSubmenu()"
+      >
+        <i class="fa fa-users-cog"></i><span>Moderation</span>
+        <i class="fa-solid fa-angle-down arrow-icon"></i>
+      </a>
+      <div class="submenu" [ngClass]="{ open: isSubmenuOpen }">
+        <a routerLink="panel/whatsapp" routerLinkActive="active" (click)="closeSidebar()"
+          ><i class="fa-brands fa-whatsapp"></i><span>Whatsapp</span></a
+        >
+        <a routerLink="panel/telegram" routerLinkActive="active" (click)="closeSidebar()"
+          ><i class="fa-brands fa-telegram"></i><span>Telegram</span></a
+        >
+      </div>
+    </li>
+
+    <li (click)="closeSidebar()">
+      <a routerLink="pricing" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        ><i class="fa-solid fa-hand-holding-dollar"></i><span>Pricing</span></a
+      >
+    </li>
+    <li (click)="closeSidebar()">
+      <a routerLink="api" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        ><i class="fa-solid fa-code"></i><span>API</span></a
+      >
+    </li>
+    <li (click)="closeSidebar()">
+      <a routerLink="support" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        ><i class="fa-solid fa-headset"></i><span>Support</span></a
+      >
+    </li>
+    <li (click)="closeSidebar()">
+      <a routerLink="wallet" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        ><i class="fa-solid fa-wallet"></i><span>Wallet</span></a
+      >
+    </li>
+    <li (click)="closeSidebar()">
+      <a routerLink="profile" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        ><i class="fa-solid fa-user"></i><span>Profile</span></a
+      >
+    </li>
+  </ul>
+</div>

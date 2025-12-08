@@ -1,0 +1,103 @@
+.wrapper {
+  padding: 20px 37px;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+
+
+/* =======================
+   Search Input
+======================= */
+.wrapper input[type='text'] {
+  padding: 15px 50px;
+  border-radius: 10px;
+  border: 1px solid #e3e3e3;
+  outline: none;
+  background-color: #fafafa;
+  font-size: 18px;
+}
+
+.wrapper input[type='text']::placeholder {
+  color: #999;
+}
+
+/* Icon inside input */
+.wrapper input[type='text'] {
+  background-image: url('https://cdn-icons-png.flaticon.com/512/622/622669.png');
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
+
+@media (max-width:575.98px){
+  .wrapper{
+    padding: 20px 17px;
+
+  }
+  .wrapper input[type='text']{
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+/* =======================
+   Right Section
+======================= */
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Notification Icon */
+.notification-wrapper {
+  position: relative;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.notification-wrapper i {
+  color: #444;
+}
+
+.notification-wrapper .dot {
+  width: 9px;
+  height: 9px;
+  background: red;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  border-radius: 50%;
+}
+
+/* Profile Section */
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-box img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-box h5 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-box p {
+  margin: 0;
+  font-size: 13px;
+  color: #777;
+}
