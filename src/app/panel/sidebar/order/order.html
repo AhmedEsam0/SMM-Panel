@@ -1,1 +1,101 @@
-<p>order works!</p>
+<div class="order-section">
+  <div class="mb-2x5">
+    <h2 class="fw-bold ls-1">New Order</h2>
+    <p class="ls-1 text-secondary fw-semibold fs-1x1">Feel Free To Order What Ever You Want</p>
+  </div>
+  <div class="wrapper d-flex flex-column flex-md-row gap-4">
+    <div class="flex-grow-1 p-4 bg-white rounded-4 shadow-sm">
+      <h3>Order Details</h3>
+      <p class="text-secondary">Fill in the details below to create your order</p>
+      <form>
+        <div class="mb-4">
+          <label class="form-label" for="service-category">Service Category *</label>
+
+          <select class="form-select" aria-label="Default select example" id="service-category">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label" for="service">Service *</label>
+
+          <select class="form-select" aria-label="Default select example" id="service">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            rows="3"
+            type="text"
+            value="Disabled readonly input"
+            aria-label="Disabled input example"
+            disabled
+            readonly
+          ></textarea>
+        </div>
+
+        <div class="mb-4">
+          <label for="link" class="form-label">Link *</label>
+          <input
+            type="email"
+            class="form-control"
+            id="link"
+            aria-describedby="emailHelp"
+            placeholder="email@example.com"
+          />
+          <div id="emailHelp" class="form-text">Enter the full URL of the post or profile</div>
+        </div>
+
+        <div class="mb-4">
+          <label for="quantity" class="form-label">Quantity *</label>
+          <input
+            class="form-control"
+            min="100"
+            max="100000"
+            type="number"
+            name=""
+            id="quantity"
+            placeholder="100"
+          />
+          <div class="form-text">Min: 100 &nbsp;| &nbsp; Max: 100,000</div>
+        </div>
+
+        <div class="mb-4">
+          <label for="total" class="form-label">Total Price</label>
+          <input
+            class="form-control"
+            type="text"
+            value="Disabled readonly input"
+            aria-label="Disabled input example"
+            disabled
+            readonly
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Comments (optional)</label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+            placeholder="Any Other Instructions..."
+          ></textarea>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <button type="submit" class="btn p-3 btn-primary border-0 outline-0 flex-grow-1">
+            Submit Order</button
+          ><button type="reset" class="btn p-3 btn-danger border-0 outline-0">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive} from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { ToggleSidebar } from '../../../Services/toggle-sidebar';
 
 @Component({
@@ -10,12 +10,16 @@ import { ToggleSidebar } from '../../../Services/toggle-sidebar';
   styleUrl: './sidebar.css',
 })
 export class Sidebar {
+  isSidebarOpen = false;
   isSubmenuOpen = false;
-  constructor(private router: Router, private sidebarService: ToggleSidebar) {}
-  isSidebarOpen: boolean = false;
+
+  constructor(
+    private router: Router,
+    public sidebarService: ToggleSidebar
+  ) {}
 
   ngOnInit() {
-    this.sidebarService.sidebarOpen$.subscribe((state) => {
+    this.sidebarService.sidebarOpen$.subscribe(state => {
       this.isSidebarOpen = state;
     });
   }

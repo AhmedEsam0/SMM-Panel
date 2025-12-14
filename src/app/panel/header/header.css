@@ -5,9 +5,6 @@
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-
-
-
 /* =======================
    Search Input
 ======================= */
@@ -32,20 +29,8 @@
   background-position: 20px center;
 }
 
-
-@media (max-width:575.98px){
-  .wrapper{
-    padding: 20px 17px;
-
-  }
-  .wrapper input[type='text']{
-    width: 100%;
-    padding-right: 0;
-  }
-}
-
 /* =======================
-   Right Section
+Right Section
 ======================= */
 
 .right-section {
@@ -100,4 +85,19 @@
   margin: 0;
   font-size: 13px;
   color: #777;
+}
+
+@media (max-width: 575.98px) {
+  .wrapper {
+    padding: 20px 17px;
+  }
+  .wrapper input[type='text'] {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+@media (min-width: 850px) {
+  button[name='toggle-button'] {
+    display: none;
+  }
 }

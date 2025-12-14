@@ -4,8 +4,6 @@ import { Panel } from './panel/panel';
 import { Dashboard } from './panel/sidebar/dashboard/dashboard';
 import { Services } from './panel/sidebar/services/services';
 import { Order } from './panel/sidebar/order/order';
-import { Magic } from './panel/sidebar/magic/magic';
-import { Moderation } from './panel/sidebar/moderation/moderation';
 import { Pricing } from './panel/sidebar/pricing/pricing';
 import { Api } from './panel/sidebar/api/api';
 import { Support } from './panel/sidebar/support/support';
@@ -22,8 +20,6 @@ export const routes: Routes = [
       { path: 'dashboard', component: Dashboard },
       { path: 'services', component: Services },
       { path: 'new-order', component: Order },
-      { path: 'magic', component: Magic },
-      // { path: 'moderation', component: Moderation },
       { path: 'pricing', component: Pricing },
       { path: 'api', component: Api },
       { path: 'support', component: Support },

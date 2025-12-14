@@ -1,4 +1,4 @@
-@if (isSidebarOpen) {
+@if (isSidebarOpen&&sidebarService.isMobile()) {
 <div class="overlay" (click)="closeSidebar()"></div>
 
 }
@@ -24,29 +24,7 @@
         ><i class="fa-solid fa-circle-plus"></i><span>New Order</span></a
       >
     </li>
-    <li (click)="closeSidebar()">
-      <a routerLink="magic" routerLinkActive="active"
-        ><i class="fas fa-magic"></i><span>Magic</span></a
-      >
-    </li>
-    <li class="dropdown" [class.active]="isModerationActive()">
-      <a
-        class="dropdown-trigger cursor-pointer"
-        [class.active]="isModerationActive()"
-        (click)="toggleSubmenu()"
-      >
-        <i class="fa fa-users-cog"></i><span>Moderation</span>
-        <i class="fa-solid fa-angle-down arrow-icon"></i>
-      </a>
-      <div class="submenu" [ngClass]="{ open: isSubmenuOpen }">
-        <a routerLink="panel/whatsapp" routerLinkActive="active" (click)="closeSidebar()"
-          ><i class="fa-brands fa-whatsapp"></i><span>Whatsapp</span></a
-        >
-        <a routerLink="panel/telegram" routerLinkActive="active" (click)="closeSidebar()"
-          ><i class="fa-brands fa-telegram"></i><span>Telegram</span></a
-        >
-      </div>
-    </li>
+
 
     <li (click)="closeSidebar()">
       <a routerLink="pricing" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"

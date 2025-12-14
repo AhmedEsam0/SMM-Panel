@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { PopularService } from "../services/popular-service/popular-service";
 
 interface Stat {
   icon: string;
@@ -16,13 +17,7 @@ interface Btn {
   hint: string;
 }
 
-interface Service {
-  iconBgClass: string;
-  icon: string;
-  title: string;
-  hint: string;
-  price: string;
-}
+
 
 interface Tool {
   iconBg: string;
@@ -35,7 +30,7 @@ interface Tool {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule],
+  imports: [CommonModule, PopularService],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
@@ -88,50 +83,7 @@ export class Dashboard {
       hint: 'Top up your wallet balance',
     },
   ];
-  services: Service[] = [
-    {
-      iconBgClass: 'sBg-1',
-      icon: 'fa-brands fa-instagram',
-      title: 'Instagram Followers',
-      hint: 'High quality followers with fast delivery',
-      price: '2.50',
-    },
-    {
-      iconBgClass: 'sBg-2',
-      icon: 'fa-brands fa-youtube',
-      title: 'YouTube Views',
-      hint: 'Real views from active users worldwide',
-      price: '1.20',
-    },
-    {
-      iconBgClass: 'sBg-3',
-      icon: 'fa-brands fa-facebook-f',
-      title: 'Facebook Likes',
-      hint: 'Instant delivery with lifetime guarantee',
-      price: '3.00',
-    },
-    {
-      iconBgClass: 'sBg-4',
-      icon: 'fa-brands fa-tiktok',
-      title: 'TikTok Followers',
-      hint: 'Premium followers with high retention',
-      price: '4.50',
-    },
-    {
-      iconBgClass: 'sBg-5',
-      icon: 'fa-brands fa-twitter',
-      title: 'Twitter Retweets',
-      hint: 'Boost engagement with real retweets',
-      price: '2.80',
-    },
-    {
-      iconBgClass: 'sBg-6',
-      icon: 'fa-brands fa-instagram',
-      title: 'Instagram Likes',
-      hint: 'Instant likes from real active accounts',
-      price: '1.50',
-    },
-  ];
+
 
   tools: Tool[] = [
     {

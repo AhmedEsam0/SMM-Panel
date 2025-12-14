@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { ToggleSidebar } from '../../../Services/toggle-sidebar';
 
 @Component({
@@ -11,16 +11,19 @@ export class Header {
   initializeNotificationComponent() {
     throw new Error('Method not implemented.');
   }
+  isSidebarOpen = false;
+
   constructor(private sidebarService: ToggleSidebar) {}
 
-  isSidebarOpen: boolean = false;
-
   ngOnInit() {
-    this.sidebarService.sidebarOpen$.subscribe((state) => {
+    this.sidebarService.sidebarOpen$.subscribe(state => {
       this.isSidebarOpen = state;
     });
   }
+
   sidebarBtnClicked() {
     this.sidebarService.toggleSidebar();
   }
+
+
 }

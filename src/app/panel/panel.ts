@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Sidebar } from './sidebar/sidebar';
 import { Header } from './header/header';
 import { RouterOutlet } from '@angular/router';
+import { ToggleSidebar } from '../../Services/toggle-sidebar';
 
 @Component({
   selector: 'app-panel',
@@ -9,4 +10,11 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './panel.html',
   styleUrl: './panel.css',
 })
-export class Panel {}
+export class Panel {
+  constructor(private sidebarService: ToggleSidebar) {}
+
+  @HostListener('window:resize')
+  onResize() {
+    this.sidebarService.onResize();
+  }
+}
