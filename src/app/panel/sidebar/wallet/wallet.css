@@ -8,7 +8,7 @@
   }
 } */
 @media (min-width: 768px) {
-  .col-md-4 {
-    max-width: calc((100% / 3) - 0.667rem);
+  button.col-md-6{
+    max-width: calc(50% - 0.75rem);
   }
 }

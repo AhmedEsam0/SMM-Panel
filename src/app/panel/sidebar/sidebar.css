@@ -136,7 +136,7 @@
 
 @media (max-width: 850px) {
   .sidebar {
-    width: 75%;
+    width: 60%;
     position: fixed;
     top: 0;
     left: 0;

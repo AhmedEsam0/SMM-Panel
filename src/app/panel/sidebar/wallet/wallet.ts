@@ -19,11 +19,7 @@ export class Wallet {
       title: 'Add Funds',
       hint: 'Deposite Money to Wallet',
     },
-    {
-      icon: 'fa-solid fa-arrow-down hintBg-2 hint-2',
-      title: 'Withdraw',
-      hint: 'Transfer Funds to Bank Account',
-    },
+    
     {
       icon: 'fa-solid fa-right-left hintBg-3 hint-3',
       title: 'Transfer Balance',

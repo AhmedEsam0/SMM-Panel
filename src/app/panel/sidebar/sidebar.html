@@ -5,7 +5,7 @@
 
 <!-- Sidebar -->
 <div class="sidebar" [class.open]="isSidebarOpen">
-  <a routerLink="home" class="text-center" (click)="closeSidebar()">
+  <a routerLink="dashboard" class="text-center" (click)="closeSidebar()">
     <img src="Logo.JPG" class="logo" />
   </a>
   <ul class="menu">
@@ -26,11 +26,6 @@
     </li>
 
 
-    <li (click)="closeSidebar()">
-      <a routerLink="pricing" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-        ><i class="fa-solid fa-hand-holding-dollar"></i><span>Pricing</span></a
-      >
-    </li>
     <li (click)="closeSidebar()">
       <a routerLink="api" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
         ><i class="fa-solid fa-code"></i><span>API</span></a
